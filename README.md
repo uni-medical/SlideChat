@@ -121,10 +121,12 @@ SlideChat is deployment-friendly. NVIDIA A100 (80GB) is recommended for processi
 **BibTeX:**
 
 ```bibtex
-@article{chen2024slidechat,
-  title={SlideChat: A Large Vision-Language Assistant for Whole-Slide Pathology Image Understanding},
-  author={Chen, Ying and Wang, Guoan and Ji, Yuanfeng and Li, Yanjun and Ye, Jin and Li, Tianbin and and Ming, Hu and Yu, Rongshan and Qiao, Yu and He, Junjun},
-  journal={arXiv preprint arXiv:2410.11761},
-  year={2024}
+@inproceedings{chen2025slidechat,
+  title={Slidechat: A large vision-language assistant for whole-slide pathology image understanding},
+  author={Chen, Ying and Wang, Guoan and Ji, Yuanfeng and Li, Yanjun and Ye, Jin and Li, Tianbin and Hu, Ming and Yu, Rongshan and Qiao, Yu and He, Junjun},
+  booktitle={2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages={5134--5143},
+  year={2025},
+  organization={IEEE}
 }
 ```
