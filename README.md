@@ -1,17 +1,11 @@
-# SlideChat: A Large Vision-Language Assistant for Whole-Slide Pathology Image Understanding
+# SlideChat: A Multimodal Generative AI Assistant for Whole-Slide Computational Pathology
 
-[🍎 **Homepage**](https://uni-medical.github.io/SlideChat.github.io/) | [🤗 **Dataset**](https://huggingface.co/datasets/General-Medical-AI/SlideChat) | [🤗 **Model**](https://huggingface.co/General-Medical-AI/SlideChat_Weight) | [📖**Paper**](https://arxiv.org/pdf/2410.11761v1) 
 
-**Abstract**: Despite the progress made by multimodal large language models (MLLMs) in computational pathology, they remain limited by a predominant focus on patchlevel analysis, missing essential contextual information at the whole-slide level. The lack of large-scale instruction datasets and the gigapixel scale of whole slide images (WSIs) pose significant developmental challenges. In this paper, we present SlideChat, the first vision-language assistant capable of understanding gigapixel whole-slide images, exhibiting excellent multimodal conversational capability and response complex instruction across diverse pathology scenarios. To support its development, we created SlideInstruction, the largest instructionfollowing dataset for WSIs consisting of 4.2K WSI captions and 176K VQA pairs with multiple categories. Furthermore, we propose SlideBench, a multimodal benchmark that incorporates captioning and VQA tasks to assess SlideChat’s capabilities in varied clinical settings such as microscopy, diagnosis. Compared to both general and specialized MLLMs, SlideChat exhibits exceptional capabilities, achieving state-of-the-art performance on 18 of 22 tasks.
+> **Note**
+>
+> This repository provides the official code for SlideChat. The expanded study, published in *Nature Cancer*, substantially extends our original CVPR 2025 work with a larger instruction dataset, broader expert-reviewed evaluation, and additional pathology tasks across cancer types.
 
-<p align="center">
-    <img src="img/Fig1_slidechat_illustration.png" width="80%"> <br>
-</p>
 
-# Update
-
-- **🚀[2025-03-18]: We have released SlideInstruction, SlideBench and SlideChat!**
-- **🚀[2025-02-27]: Accepted by CVPR2025!🌟**
 
 # Release
 
@@ -47,7 +41,7 @@ Download the JSON file containing WSI IDs (TCGA) and conversation data from the 
 
 ## Training
 
-SlideChat serializes each input WSI into a sequence of patches, converting each into visual embeddings with a patch-level encoder [CONCH](https://github.com/mahmoodlab/CONCH). A slide-level encoder then interacts with these features to generate contextual embeddings. Then, a multimodal projector maps the visual features from the slide-level encoder into a unified space, aligned seamlessly with the LLM. SlideChat was trained for two stages: (1) Cross-Domain Alignment: SlideChat is trained to generate descriptive captions using 4.2K WSI-caption pairs from SlideInstruction. Specifically, only the slide-level encoder and projection are updated, while the patch-level encoder and LLM weights remain fixed; (2) Visual Instruction Learning: we utilize 176K WSI VQAs from SlideInstruction, allowing the slide encoder, projection layer, and large language model components to be fully trainable to ensure comprehensive adaptability.
+SlideChat serializes each input WSI into a sequence of patches, converting each into visual embeddings with a patch-level encoder [CONCH](https://github.com/mahmoodlab/CONCH). A slide-level encoder then interacts with these features to generate contextual embeddings. Then, a multimodal projector maps the visual features from the slide-level encoder into a unified space, aligned seamlessly with the LLM. SlideChat was trained for two stages: (1) Cross-Domain Alignment: SlideChat is trained to generate descriptive captions using WSI-caption pairs from SlideInstruction. Specifically, only the slide-level encoder and projection are updated, while the patch-level encoder and LLM weights remain fixed; (2) Visual Instruction Learning: we utilize WSI VQAs from SlideInstruction, allowing the slide encoder, projection layer, and large language model components to be fully trainable to ensure comprehensive adaptability.
 
 <p align="center">
     <img src="img/Fig2_slidechat_method.png" width="80%"> <br>
