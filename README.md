@@ -112,7 +112,7 @@ We trained SlideChat using **8 x NVIDIA A100 (80GB)** GPUs.
 SlideChat is deployment-friendly. NVIDIA A100 (80GB) is recommended for processing large slides, while a single NVIDIA RTX 4090 (24GB) is sufficient for WSIs with < 20,480 patches.
 
 # Contact
-- Ying Chen: cying2023@stu.xmu.edu.cn
+- Ying Chen: yc4890@columbia.edu or cying2023@stu.xmu.edu.cn
 - Yuanfeng Ji: yfj@stanford.edu
 - Junjun He: hejunjun@pjlab.org.cn
 
