@@ -1,4 +1,4 @@
-# SlideChat: A Multimodal Generative AI Assistant for Whole-Slide Computational Pathology
+# SlideChat
 
 
 > **Note**
