@@ -205,6 +205,15 @@ SlideChat is deployment-friendly. NVIDIA A100 (80GB) is recommended for processi
 **BibTeX:**
 
 ```bibtex
+@article{chen2026slidechat,
+  title={SlideChat is a multimodal generative artificial intelligence assistant for whole-slide computational pathology across cancer types},
+  author={Chen, Ying and Ma, Chenglong and Li, Qiongqiong and Yan, Fang and Chen, Yirong and Li, Tianbin and Ye, Jin and Hu, Ming and Lin, Yuxiang and Li, Yanjun and others},
+  journal={Nature Cancer},
+  pages={1--15},
+  year={2026},
+  publisher={Nature Publishing Group US, New York}
+}
+
 @inproceedings{chen2025slidechat,
   title={Slidechat: A large vision-language assistant for whole-slide pathology image understanding},
   author={Chen, Ying and Wang, Guoan and Ji, Yuanfeng and Li, Yanjun and Ye, Jin and Li, Tianbin and Hu, Ming and Yu, Rongshan and Qiao, Yu and He, Junjun},
